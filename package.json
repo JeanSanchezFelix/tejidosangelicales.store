@@ -1,0 +1,17 @@
+{
+    "name": "locofy-html-css-project",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "parcel ./*.html ",
+        "build": "parcel build ./*.html  --dist-dir ./build"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "parcel": "^2.7.0"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.0"
+    }
+}
