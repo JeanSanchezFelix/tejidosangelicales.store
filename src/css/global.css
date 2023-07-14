@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-jejumyeongjo: JejuMyeongjo;
+
+  /* font sizes */
+  --font-size-smi: 13px;
+  --font-size-sm: 14px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-plum: #e4a5ff;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}
