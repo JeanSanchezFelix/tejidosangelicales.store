@@ -2,6 +2,39 @@
   background-color: #45CFDD;
 }
 
+.small-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.bg-image-message {
+  width: 500px;
+  height: 20px;
+}
+
+.hero {
+  min-height: 50vh;
+  background: #000 url(/public/rectangle-2@2x.png) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+.hero-content {
+  position: absolute;
+  bottom: 15px;
+}
+
+
+
+
 .biinstagram-icon,
 .icsharp-facebook-icon,
 .mdiemail-outline-icon {
@@ -62,20 +95,20 @@
   height: 146px;
   object-fit: cover;
 }
-.cuando-compras-algun {
+.text-body {
   margin-block-start: 0;
   margin-block-end: 1.5px;
 }
 .p {
   margin: 0;
 }
-.cuando-compras-algun-container,
+.text-body-container,
 .tejidos-destacados {
   position: absolute;
   display: inline-block;
   font-weight: 600;
 }
-.cuando-compras-algun-container {
+.text-body-container {
   top: 141px;
   left: calc(50% - 153px);
   color: var(--color-white);
