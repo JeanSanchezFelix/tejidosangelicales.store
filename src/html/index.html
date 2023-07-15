@@ -13,10 +13,15 @@
   <link rel="icon" href="/src/img/icon.png">
   
   <!--Scripts-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+  
   <link rel="stylesheet" href="/src/css/global.css" />
   <link rel="stylesheet" href="/src/css/index.css" />
+
   
   <!--Icons-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -24,12 +29,12 @@
   
   <!--Fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,500;1,600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JejuMyeongjo:wght@400&display=swap" />
 </head>
 
 <body>
+  
   <!--Navigation Bar-->
-  <nav class="navbar navbar-expand-lg custom-navbar-bg;" id="navbar">
+  <nav class="navbar navbar-expand-lg custom-navbar-bg sidenav;" data-mdb-hidden="false" id="navbar">
 
     <div class="mx-auto text-center">
       <a class="mx-3 navbar-brand" href="index.html" id="small-icon">
@@ -44,7 +49,7 @@
     </div>
     
     <div class="position-absolute" id="hamburger"> <!-- #TODO: Animated Hamburger {https://www.youtube.com/watch?v=_MrShB9fh7U} -->
-      <button class="navbar-toggler ms-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
