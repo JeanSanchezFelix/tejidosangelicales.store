@@ -22,13 +22,46 @@
   <!--Icons-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/4a90c2a6e0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/public/icofont.min.css">
 
   <!--Fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,500;1,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,500;1,600&display=swap" />
+    
 </head>
 
-<body>
+<body>  
+  <!-- Side-Navbar -->
+  <nav id="slide-menu">
+    <ul>
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title" id="sidenav-label">MENU</h5>
+      </div>
+      <li  class="nav-item nav-home px-4 nav-link" onclick="location.href = 'index.html';">Home</li>
+
+      <li  class="nav-item nav-gorros px-4 nav-link" onclick="location.href = '.html';">Gorros</li>
+
+      <li  class="nav-item nav-tops px-4 nav-link" onclick="location.href = '.html';">Tops</li>
+
+      <li  class="nav-item nav-ponchos px-4 nav-link" onclick="location.href = '.html';">Ponchos</li>
+
+      <li  class="nav-item nav-flores px-4 nav-link" onclick="location.href = '.html';">Flores</li>
+
+      <li  class="nav-item nav-bebe px-4 nav-link" onclick="location.href = '.html';">Set de bebé</li>
+
+      <li  class="nav-item nav-llave px-4 nav-link" onclick="location.href = '.html';">Llaveros</li>
+      
+      <li  class="nav-item nav-custom px-4 nav-link" onclick="location.href = '.html';">Tejidos Custom</li>
+
+      <li  class="sep nav-facebook" onclick="window.open('https://www.facebook.com/profile.php?id=100066991164597&mibextid=LQQJ4d','_blank');">Facebook</li>
+      <li  class="nav-instagram" onclick="window.open('https://instagram.com/tejidos_angelicales?igshid=OGQ5ZDc2ODk2ZA==', '_blank');">Instagram</li>
+      <li  class="nav-email" onclick="location.href ='mailto:tejidosangelicales1@gmail.com';">Email</li>
+    </ul>
+  </nav>
+
+
+
+
+
   <!--Navigation Bar-->
   <div id="content">
     <nav class="navbar navbar-expand-lg custom-navbar-bg sidenav;" data-mdb-hidden="false" id="content">
@@ -60,9 +93,11 @@
       <div class="menu-trigger mx-auto"></div>
     </nav>
   </div>
+  
 
-  <!-- Side-Navbar -->
-  <div id="slide-menu">
+
+
+  <!-- <div id="slide-menu">
 
     <div class="offcanvas offcanvas-start m-1" tabindex="-1" aria-labelledby="sidenav-1-label"
       id="navbarSupportedContent">
@@ -101,7 +136,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="/src/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

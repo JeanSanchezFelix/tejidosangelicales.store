@@ -38,14 +38,14 @@ div#content {
   height: 100%;
   padding: 0px;
   overflow: scroll;
-  background: #fcfeff;
+  background: #ffffff;
   border-radius: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -moz-box-shadow: -3px 0 6px #4a5562;
   -webkit-box-shadow: -3px 0 6px #4a5562;
-  box-shadow: -3px 0 6px #4a5562;
+  box-shadow: -3px 0 6px #000000a6;
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -86,7 +86,7 @@ div#content div.menu-trigger:hover {
 }
 
 div#content div.menu-trigger:hover:before {
-  color: #fcfeff;
+  color: #ffffff;
 }
 
 body.menu-active div#content {
@@ -128,12 +128,11 @@ div#shopping-cart span.icon-color:hover {
 }
 
 div#content div.shopping-cart-button:hover:before {
-  color: #fcfeff;
+  color: #ffffff;
 }
 
-
 /*
-  Menu 
+  Slide-Menu 
 */
 nav#slide-menu {
   position: fixed;
@@ -162,12 +161,12 @@ nav#slide-menu>ul {
 }
 
 nav#slide-menu>ul li {
-  color: #dfe5eb;
+  color: #ffffff;
   padding: 6px 0;
   cursor: pointer;}
 
 nav#slide-menu>ul li:hover {
-  color: #59e9df;
+  color: #45CFDD;
 }
 
 nav#slide-menu>ul li:before {
@@ -177,7 +176,7 @@ nav#slide-menu>ul li:before {
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  color: #59e9df;
+  color: #E4A5FF;
   margin-right: 12px;
   text-align: center;
   font-variant: normal;
@@ -192,24 +191,71 @@ nav#slide-menu>ul li.sep {
   border-top: 1px solid #6b7b8d;
 }
 
-nav#slide-menu>ul li.timeline:before {
-  content: '\e805';
+
+nav#slide-menu>ul li.nav-home:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ef47';
 }
 
-nav#slide-menu>ul li.events:before {
-  content: '\e802';
+nav#slide-menu>ul li.nav-gorros:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\e814';
 }
 
-nav#slide-menu>ul li.calendar:before {
-  content: '\e800';
+nav#slide-menu>ul li.nav-tops:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\edaf';
 }
 
-nav#slide-menu>ul li.settings:before {
-  content: '\e803';
+nav#slide-menu>ul li.nav-ponchos:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ef54';
 }
 
-nav#slide-menu>ul li.logout:before {
-  content: '\e804';
+nav#slide-menu>ul li.nav-flores:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\e80c';
+}
+
+nav#slide-menu>ul li.nav-bebe:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\eb9e';
+}
+
+nav#slide-menu>ul li.nav-llave:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ef59';
+}
+
+nav#slide-menu>ul li.nav-custom:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\e817';
+}
+
+nav#slide-menu>ul li.nav-facebook:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ed37';
+}
+
+nav#slide-menu>ul li.nav-instagram:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ed46';
+}
+
+nav#slide-menu>ul li.nav-email:before {
+  font-family: 'IcoFont';
+  font-size: 1.1em;
+  content: '\ef12';
 }
 
 body.menu-active nav#slide-menu {
@@ -219,6 +265,10 @@ body.menu-active nav#slide-menu {
 body.menu-active nav#slide-menu ul {
   left: 0px;
   opacity: 1;
+}
+
+#sidenav-label{
+  color: #ffffff;
 }
 
 
