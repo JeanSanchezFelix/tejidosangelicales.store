@@ -10,6 +10,24 @@
   justify-content: center;
 }
 
+.big-icon {
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  position: relative;
+}
+
+.central-Navbar {
+  padding-left: 10px;
+  padding-right: 100px;
+}
+
+.nav-item {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 /* Transition for all properties */
 #logo {
   -webkit-transition-property: all;
