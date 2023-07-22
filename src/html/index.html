@@ -18,6 +18,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="/src/css/global.css" />
   <link rel="stylesheet" href="/src/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!--Icons-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -58,8 +59,7 @@
   <div id="content">
 
     <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-lg custom-navbar-bg sidenav;" data-mdb-hidden="false" id="navbar">
-
+    <nav class="navbar navbar-expand-lg custom-navbar-bg sidenav sticky-top" data-mdb-hidden="false" id="navbar">
       <!-- Logo -->
       <div class="mx-auto text-center logo-container">
         <a class="mx-3 navbar-brand d-lg-none" href="index.html" atl="small-icon">
@@ -117,15 +117,116 @@
       </div>
     </nav>
 
-    <!-- Continue Here -->
+    <div class="hero-area">
+      <div class="welcome-slides">
+        <!-- Description -->
+        <div class="single-welcome-slides bg-img bg-overlay jarallax"
+          style="background-image: url(/public/description-bg.jpg);">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-12 d-flex justify-content-end">
+                <div class="welcome-content justify-content-center flex-column">
+                  <h3 data-animation="fadeInDown" data-delay="400ms"><strong>"Cuando compras algún artículo tejido a
+                      mano, estás adquiriendo mucho más que un objeto, sino que te
+                      llevas la creatividad y el amor que fue utilizado para su creación".</strong></h3> <br>
+                  <p data-animation="fadeInDown" data-delay="500ms"><em>~ Angie</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Home Page Content -->
+    <div class="home">
+
+      <!-- Tejidos destacados -->
+      <div class="container">
+        <div class="row text-center mt-5">
+          <div class="col-12">
+            <h2 class="tejidos-destacados">Tejidos destacados</h2>
+            <img class="line-icon" alt="" src="/public/line-1.svg" />
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mt-5">
+            <div class="home-item-1"></div>
+            <img class="fluent-mdl2shop-icon" alt="item-1" src="/public/fluentmdl2shop.svg" />
+            <img class="home-child2" alt="" src="/public/rectangle-4@2x.png" />
+            <div class="falda-pocahontas-ajustable-container">
+              <p class="text-body">
+                <i class="i">Falda Pocahontas</i>
+              </p>
+              <p class="ajustable-en-la-cintura">
+                <i class="ajustable-en-la-cintura1">
+                  <span>Ajustable en la cintura</span>
+                </i>
+              </p>
+              <p class="p">
+                <i class="i">$30</i>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mt-5">
+            <div class="home-item-2"></div>
+            <img class="fluent-mdl2shop-icon1" alt="item-2" src="/public/fluentmdl2shop.svg" />
+            <img class="home-child3" alt="" src="/public/rectangle-36@2x.png" />
+            <div class="suculenta-colgante">
+              <p class="text-body">
+                <i class="i">Suculenta colgante</i>
+              </p>
+              <p class="ajustable-en-la-cintura">
+                <span>
+                  <i class="ajustable-en-la-cintura1">Plantita colgante</i>
+                  <i class="i"> </i>
+                </span>
+              </p>
+              <p class="p">
+                <span>
+                  <i class="i">$10</i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mt-5">
+              <p class="politica-de-envios">Politica de envios y entregas</p>
+              <p class="text-body">
+                <span class="leer1">Leer</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="home-child" alt="" src="/public/rectangle-7.svg" />
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mt-5">
+              <p class="siguenos">SÍGUENOS</p>
+              <img class="icsharp-facebook-icon" alt="" src="/public/icsharpfacebook.svg" />
+              <img class="biinstagram-icon" alt="" src="/public/biinstagram.svg" />
+              <img class="mdiemail-outline-icon" alt="" src="/public/mdiemailoutline.svg" />
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+    </div>
   </div>
 
+  <script src="/src/js/Jarallax.js"></script>
+  <script src="/src/js/Jarallax{ext}.js"></script>
+  <script src="/src/js/Jarallax{Carousel}.js"></script>
 
   <script src="/src/js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

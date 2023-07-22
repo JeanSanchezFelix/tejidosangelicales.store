@@ -14,3 +14,15 @@
 }).call(this);
 
 
+/*
+  Fade-Down Animation
+*/
+$(document).ready(function() {
+// Select elements with the data-animation attribute and apply the corresponding animation class
+$('[data-animation]').each(function() {
+	var animation = $(this).data('animation');
+	var delay = $(this).data('delay') || '0ms';
+	$(this).addClass('animate__animated animate__' + animation).css('animation-delay', delay);
+});
+});
+

@@ -1,8 +1,15 @@
 /* 
   Navbar 
 */
-.navbar {
-  background-color: #45CFDD;
+.custom-navbar-bg {
+  background-color: #45CFDD; 
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-navbar-bg.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
 }
 
 .small-icon {
@@ -149,6 +156,7 @@ div#content div.shopping-cart-button:hover:before {
   color: #ffffff;
 }
 
+
 /*
   Slide-Menu 
 */
@@ -181,7 +189,8 @@ nav#slide-menu>ul {
 nav#slide-menu>ul li {
   color: #ffffff;
   padding: 6px 0;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
 nav#slide-menu>ul li:hover {
   color: #45CFDD;
@@ -208,7 +217,6 @@ nav#slide-menu>ul li.sep {
   padding-top: 14px;
   border-top: 1px solid #6b7b8d;
 }
-
 
 nav#slide-menu>ul li.nav-home:before {
   font-family: 'IcoFont';
@@ -285,7 +293,7 @@ body.menu-active nav#slide-menu ul {
   opacity: 1;
 }
 
-#sidenav-label{
+#sidenav-label {
   color: #ffffff;
 }
 
@@ -318,6 +326,176 @@ body.menu-active nav#slide-menu ul {
 .hero-content {
   position: absolute;
   bottom: 15px;
+}
+
+
+/*
+ Farmie
+*/
+
+.hero-area {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.single-welcome-slides {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .single-welcome-slides {
+    height: 550px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single-welcome-slides {
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .single-welcome-slides {
+    height: 600px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .single-welcome-slides {
+    height: 450px;
+  }
+}
+
+.single-welcome-slides .welcome-content {
+  position: relative;
+  z-index: 1;
+}
+
+.single-welcome-slides .welcome-content h3 {
+  font-size: 50px;
+  color: #ffffff;
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single-welcome-slides .welcome-content h3 {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .single-welcome-slides .welcome-content h3 {
+    font-size: 30px;
+  }
+}
+
+.single-welcome-slides .welcome-content p {
+  font-size: 30px;
+  position:absolute;
+  right: 30px;
+  color: #ffffff;
+}
+
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay {
+  position: relative;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg-overlay::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.jarallax {
+  position: relative;
+  z-index: 0; }
+
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+.h-100 {
+  height: 100% !important;
+}
+
+.align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+/* Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 
