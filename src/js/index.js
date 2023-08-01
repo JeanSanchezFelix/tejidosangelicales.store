@@ -43,6 +43,22 @@ $(document).ready(function () {
 
 
 /*
+  Popup
+*/
+// Function to show the popup
+function showPopup() {
+	document.getElementById("popup").style.display = "block";
+	document.body.appendChild(document.getElementById("popup")); // Append the popup to the body
+  }
+  
+  // Function to hide the popup
+  function hidePopup() {
+	document.getElementById("popup").style.display = "none";
+  }
+  
+
+
+/*
   WOW Animation Activation
 */
 !(function (a) {
