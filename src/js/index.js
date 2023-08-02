@@ -56,6 +56,66 @@ function showPopup() {
 	document.getElementById("popup").style.display = "none";
   }
   
+  
+/*
+  Sorting Dropdown
+*/
+// Store the original order of items when the page loads
+const productListing = document.querySelector('.product-listing');
+const originalItems = Array.from(productListing.querySelectorAll('.item'));
+
+const sortingSelector = document.getElementById('sorting-selector');
+sortingSelector.addEventListener('change', () => {
+  const selectedValue = sortingSelector.value;
+  let items = Array.from(originalItems); // Make a copy of the original items to sort
+
+  switch (selectedValue) {
+    case 'price-low-to-high':
+      items.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('.s-cost strong').innerText.replace('$', ''));
+        const priceB = parseFloat(b.querySelector('.s-cost strong').innerText.replace('$', ''));
+        return priceA - priceB;
+      });
+      break;
+    case 'price-high-to-low':
+      items.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('.s-cost strong').innerText.replace('$', ''));
+        const priceB = parseFloat(b.querySelector('.s-cost strong').innerText.replace('$', ''));
+        return priceB - priceA;
+      });
+      break;
+    case 'name-a-to-z':
+      items.sort((a, b) => {
+        const nameA = a.querySelector('.item-text').innerText.toUpperCase();
+        const nameB = b.querySelector('.item-text').innerText.toUpperCase();
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
+      });
+      break;
+    case 'name-z-to-a':
+      items.sort((a, b) => {
+        const nameA = a.querySelector('.item-text').innerText.toUpperCase();
+        const nameB = b.querySelector('.item-text').innerText.toUpperCase();
+        if (nameA > nameB) return -1;
+        if (nameA < nameB) return 1;
+        return 0;
+      });
+      break;
+    default:
+      items = Array.from(originalItems); // Reset the items back to the original order
+      break;
+  }
+
+  // Clear existing items
+  while (productListing.firstChild) {
+    productListing.removeChild(productListing.firstChild);
+  }
+  // Append sorted items back to the product listing
+  items.forEach((item) => {
+    productListing.appendChild(item);
+  });
+});
 
 
 /*
