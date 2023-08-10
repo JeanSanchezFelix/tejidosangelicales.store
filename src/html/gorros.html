@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Required Meta Tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0.8, width=device-width" />
+    <meta name="description"
+        content="¡Bienvenido/a a Tejidos Angelicales! Ofrecemos una amplia gama de productos artesanales, incluyendo gorros, tops, ponchos, faldas, artículos para bebés, flores y más. Descubre nuestra colección única y encuentra el accesorio perfecto para ti o como regalo.">
+    <title>Tejidos Angelicales</title>
+    <link rel="icon" href="/src/img/icon.ico">
+
+    <!--Scripts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/4a90c2a6e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/icofont.min.css">
+
+    <!--Fonts-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,500;1,600&display=swap" />
+</head>
+
+<body>
+
+    <!-- Pre-Loader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- NavBar -->
+    <div id="dynamicNav">
+        <script>
+            fetch('/src/html/tejidos.html')
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const includedPart = doc.querySelector('.dynamicNav');
+                    document.getElementById('dynamicNav').appendChild(includedPart);
+                });
+        </script>
+    </div>
+
+    <!-- Main Content Page -->
+    <div id="content">
+
+        <div id="dynamicContent">
+            <script>
+                fetch('/src/html/tejidos.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const includedPart = doc.querySelector('.dynamicContent');
+                        document.getElementById('dynamicContent').appendChild(includedPart);
+                    });
+            </script>
+        </div>
+
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-lg custom-navbar-bg sidenav sticky-top dynamicContent" data-mdb-hidden="false"
+            id="navbar">
+            <!-- Logo -->
+            <div class="mx-auto text-center logo-container">
+                <a class="mx-3 navbar-brand d-lg-none" href="index.html" atl="small-icon">
+                    <div class="d-flex justify-content-center">
+                        <img id="logo" src="/src/img/logo.png" height="80" alt="navbar-logo" class="mx-auto">
+                    </div>
+                </a>
+                <a class="mx-3 navbar-brand big-icon d-none d-lg-block" href="index.html" alt="big-icon">
+                    <img id="logo" src="/src/img/logo.png" height="80" alt="navbar-logo">
+                </a>
+            </div>
+
+            <!-- Shopping Cart -->
+            <!-- #TODO: Link to the summary shopping list, with JS {https://freefrontend.com/bootstrap-shoping-carts/} -->
+            <div class="shopping-cart-container navbar-brand" id="shopping-cart">
+                <div class="shopping-cart-button text-center d-lg-none" id="small-cart">
+                    <span class="bi bi-cart3 icon-color"></span>
+                </div>
+                <div class="shopping-cart-button text-center d-none d-lg-block" id="big-cart">
+                    <span class="bi bi-cart3 icon-color"></span>
+                </div>
+            </div>
+
+            <!-- Toggler -->
+            <div class="menu-trigger mx-auto d-lg-none" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
+
+            <!-- Central-Navbar -->
+            <div class="offcanvas" id="navbarSupportedContent">
+                <ul class="navbar-nav central-Navbar">
+                    <li class="nav-item nav-home">
+                        <a class="nav-link px-4.5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5 active" href="gorros.html">Gorros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="tops.html">Tops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="ponchos.html">Ponchos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="faldas.html">Faldas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="bebe.html">Set de bebé</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="flores.html">Flores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="llaveros.html">Llaveros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4.5" href="custom.html">Tejidos Custom</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Home Page Content -->
+        <div class="home">
+
+            <div class="row align-items-start justify-content-between">
+
+                <div class="col-md-4 breadcrumb-col">
+                    <ol class="breadcrumb mt-3">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="tejidos.html">Tejidos</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gorros</a></li>
+                    </ol>
+                </div>
+
+                <div class="col-md-4 col-sm-6 ml-auto page-selector-col">
+                    <div class="sorting-section pagination pagination-sm pro-page-list justify-content-center">
+                        <div class="selector-pos">
+                            <div id="dropdown" class="dropdown">
+                                Elije una categoria:
+                                <ul class="selector">
+                                    <li><a class="down-pad" href="gorros.html">Gorros</a></li>
+                                    <li><a class="down-pad" href="tops.html">Tops</a></li>
+                                    <li><a class="down-pad" href="ponchos.html">Ponchos</a></li>
+                                    <li><a class="down-pad" href="faldas.html">Faldas</a></li>
+                                    <li><a class="down-pad" href="bebe.html">Set de bebé</a></li>
+                                    <li><a class="down-pad" href="flores.html">Flores</a></li>
+                                    <li><a class="down-pad" href="llaveros.html">Llaveros</a></li>
+                                    <li><a class="down-pad" href="custom.html">Tejidos Custom</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 ml-auto page-selector-col">
+                    <div class="sorting-section pagination pagination-sm pro-page-list justify-content-end">
+                        <div class="selector-pos">
+                            <div id="dropdown" class="dropdown">
+                                Elije el orden:
+                                <ul data-bs-target="sorting-selector" class="selector-sorting">
+                                    <li class="down-pad" value="default">Default</li>
+                                    <li class="down-pad" value="price-low-to-high">Price: Low to High</li>
+                                    <li class="down-pad" value="price-high-to-low">Price: High to Low</li>
+                                    <li class="down-pad" value="name-a-to-z">Name: A to Z</li>
+                                    <li class="down-pad" value="name-z-to-a">Name: Z to A</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Gorros Tejidos Start ***** -->
+            <div class="product-listing">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="heading-section text-center">
+                            <h2 class="tejidos-destacados"><strong>Gorros</strong></h2>
+                            <img class="line-icon" alt="" src="/public/line-1.svg" />
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/Gorro.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Gorro Sencillo</h4>
+                                        <!-- <br><span>Colores disponibles. Azul cielo, Azul oscuro, rojo, Negro, Marron, verde, verde menta, Fusha y crema</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$12.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/1._Gorro_con_bicera.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Banda con Bicera</h4>
+                                        <!-- <br><span>One size (adulto). Dos colores. Original (negro y azul). Marron y crema. Negro y rosa.</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$16.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/Gorro_de_a_crochet.JPEG" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Gorro Florado</h4>
+                                        <!-- <br><span>One size (adulto). Colores: (Original Crema y diferentes colores marrones)</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$20.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/Gorro_Petalos.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Gorro Fresita</h4>
+                                        <!-- <br><span>One size (adulto). Color original (rojo y lazo rosa con rojo)</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$12.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/Gorro_underline.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Gorro Underline</h4>
+                                        <!-- <br><span>One size (adulto). Color original (crema y marron) Azul y negro, Rosa y azul, Amarrillo y blanco</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$12.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="item">
+                                <!-- Row for the Image -->
+                                <div class="row mb-3">
+                                    <div class="col-md-12 text-center">
+                                        <div class="image-wrapper">
+                                            <img src="/src/img/products/gorros/editado.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row for the Text and Icons -->
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h4 class="mt-5 item-text">Gorro de Círculos<br><span></span></h4>
+                                        <!-- <br><span>One size (adulto). Color original (azul,crema, blanco y marron) Marron y crema, amarrillo  y blanco, Negro y azul</span> -->
+                                        <ul class="d-flex align-items-center">
+                                            <li class="s-cost d-inline"><i><strong>$12.00</strong></i></li>
+                                            <li class="s-bag d-inline" onclick="location.href = 'index.html';">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                    class="bag-svg">
+                                                    <path
+                                                        d="M21 6V21C21 21.4141 20.9219 21.8008 20.7656 22.1602C20.6094 22.5195 20.3945 22.8359 20.1211 23.1094C19.8477 23.3828 19.5273 23.5977 19.1602 23.7539C18.793 23.9102 18.4062 23.9922 18 24H4.5C4.08594 24 3.69922 23.9219 3.33984 23.7656C2.98047 23.6094 2.66406 23.3945 2.39062 23.1211C2.11719 22.8477 1.90234 22.5312 1.74609 22.1719C1.58984 21.8125 1.50781 21.4219 1.5 21V6H4.5V4.5C4.5 3.88281 4.61719 3.30078 4.85156 2.75391C5.08594 2.20703 5.41016 1.73047 5.82422 1.32422C6.23828 0.917969 6.71484 0.597656 7.25391 0.363281C7.79297 0.128906 8.375 0.0078125 9 0C9.8125 0 10.5664 0.203125 11.2617 0.609375C11.957 0.203125 12.7031 0 13.5 0C14.1172 0 14.6992 0.117188 15.2461 0.351562C15.793 0.585938 16.2695 0.910156 16.6758 1.32422C17.082 1.73828 17.4023 2.21484 17.6367 2.75391C17.8711 3.29297 17.9922 3.875 18 4.5V6H21ZM16.5 4.5C16.5 4.09375 16.4219 3.70703 16.2656 3.33984C16.1094 2.97266 15.8945 2.65625 15.6211 2.39062C15.3477 2.125 15.0273 1.91016 14.6602 1.74609C14.293 1.58203 13.9062 1.5 13.5 1.5C13.1484 1.5 12.8164 1.55859 12.5039 1.67578C12.7305 1.95703 12.9102 2.23438 13.043 2.50781C13.1758 2.78125 13.2734 3.05469 13.3359 3.32812C13.3984 3.60156 13.4414 3.87891 13.4648 4.16016C13.4883 4.44141 13.5 4.74219 13.5 5.0625V6H16.5V4.5ZM6 6H12V4.5C12 4.09375 11.9219 3.70703 11.7656 3.33984C11.6094 2.97266 11.3945 2.65625 11.1211 2.39062C10.8477 2.125 10.5273 1.91016 10.1602 1.74609C9.79297 1.58203 9.40625 1.5 9 1.5C8.58594 1.5 8.19922 1.57812 7.83984 1.73438C7.48047 1.89062 7.16406 2.10547 6.89062 2.37891C6.61719 2.65234 6.40234 2.97266 6.24609 3.33984C6.08984 3.70703 6.00781 4.09375 6 4.5V6H21ZM15.3984 22.5C15.1328 22.0312 15 21.5312 15 21V7.5H3V21C3 21.2109 3.03906 21.4062 3.11719 21.5859C3.19531 21.7656 3.30078 21.9219 3.43359 22.0547C3.56641 22.1875 3.72656 22.2969 3.91406 22.3828C4.10156 22.4688 4.29688 22.5078 4.5 22.5H15.3984ZM19.5 7.5H16.5V21C16.5 21.2109 16.5391 21.4062 16.6172 21.5859C16.6953 21.7656 16.8008 21.9219 16.9336 22.0547C17.0664 22.1875 17.2266 22.2969 17.4141 22.3828C17.6016 22.4688 17.7969 22.5078 18 22.5C18.2109 22.5 18.4062 22.4609 18.5859 22.3828C18.7656 22.3047 18.9219 22.1992 19.0547 22.0664C19.1875 21.9336 19.2969 21.7734 19.3828 21.5859C19.4688 21.3984 19.5078 21.2031 19.5 21V7.5Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add new item here -->
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Gorros Tejidos End ***** -->
+
+            <!-- Footer -->
+            <div id="dynamicFooter">
+                <script>
+                    fetch('/src/html/tejidos.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(html, 'text/html');
+                            const includedPart = doc.querySelector('.dynamicFooter');
+                            document.getElementById('dynamicFooter').appendChild(includedPart);
+                        });
+                </script>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="/src/js/WOW.js"></script>
+        <script src="/src/js/Scrollup.js"> </script>
+        <script src="/src/js/Jarallax.js"></script>
+        <script src="/src/js/Jarallax{ext}.js"></script>
+        <script src="/src/js/Jarallax{Carousel}.js"></script>
+
+        <script src="/src/js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

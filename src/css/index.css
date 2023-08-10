@@ -300,7 +300,7 @@ nav#slide-menu>ul li:before {
 
 .line-icon {
   padding-bottom: 25px;
-  width: 316px; 
+  width: 320px;
 }
 
 nav#slide-menu>ul li.nav-home:before {
@@ -412,11 +412,11 @@ nav#slide-menu>ul li.nav-email:before {
   content: "\e921";
 } */
 
-body.menu-active nav#slide-menu {
+nav#slide-menu {
   left: 0px;
 }
 
-body.menu-active nav#slide-menu ul {
+nav#slide-menu ul {
   left: 0px;
   opacity: 1;
 }
@@ -1048,9 +1048,9 @@ section {
   border: 5px solid #45CFDD
 }
 
-  .item-text{
-    color: #000000;
-  }
+.item-text {
+  color: #000000;
+}
 
 
 /* 
@@ -1368,8 +1368,10 @@ footer {
 
 
 
-/* 
-  products.html 
+/*
+---------------------------------------------
+  tejidos.html 
+---------------------------------------------
 */
 
 /* Custom style to add margin-top to the breadcrumb and page selector columns */
@@ -1378,12 +1380,12 @@ footer {
   padding-left: 40px;
 }
 
-.breadcrumb-col .breadcrumb li a{
-  color:#666;
+.breadcrumb-col .breadcrumb li a {
+  color: #666;
   font-size: 18px;
 }
 
-.breadcrumb-col .breadcrumb li a:hover{
+.breadcrumb-col .breadcrumb li a:hover {
   color: #202020;
   -moz-transition: color 300ms;
   -webkit-transition: color 300ms;
@@ -1391,7 +1393,7 @@ footer {
 }
 
 .breadcrumb-col .breadcrumb .active {
-  color:#000000;
+  color: #000000;
   font-size: 18px;
 }
 
@@ -1405,7 +1407,7 @@ footer {
   background-color: #45CFDD;
   border-radius: 60px;
   border: 30px solid #ffffff;
-} 
+}
 
 .product-listing .item {
   background-color: #ffffff;
@@ -1441,7 +1443,7 @@ footer {
   display: block;
   margin: 0 auto;
 }
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .product-listing .item h4 {
   font-size: 23px;
   margin-top: 20px;
@@ -1486,4 +1488,137 @@ footer {
 }
 
 
+/* 
+  Dropdown
+*/
+ol,
+ul {
+  list-style: none;
+}
 
+/* page container */
+#wrap {
+  display: block;
+  width: 850px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+/* user menu settings */
+#dropdown {
+  display: block;
+  padding: 13px 16px;
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  border-left: 4px solid #E4A5FF;
+  background: #fff;
+  font-size: 18px;
+  color: #656565;
+  font-weight: normal;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  -moz-transition: color 300ms;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+#dropdown:hover {
+  color: #000;
+  
+}
+
+#dropdown.open {
+  background: #E4A5FF;
+  color: #fff;
+  border-left-color: #000000;
+  -moz-transition: color 300ms;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: -3px;
+  /* move content -4px because of container left border */
+  width: 250px;
+  padding: 5px 0px;
+  display: none;
+  border-left: 4px solid #E4A5FF;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.selector {
+  left: -4px;
+}
+
+#dropdown ul li {
+  font-size: 0.9em;
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  z-index: 999;
+}
+
+#dropdown ul li:hover  {
+  color: #45CFDD;
+  background: #e7f0f7;
+
+}
+
+#dropdown ul li a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+}
+
+#dropdown ul li a:hover {
+  color: #45CFDD;
+  background: #e7f0f7;
+}
+
+.down-pad{
+  padding: 13px 13px;
+}
+
+.product-padding {
+  padding-top: 40px;
+}
+
+.main-button {
+  text-align: center;
+  margin-top: -56px; /* Add some top margin to create the vertical elevation effect */
+}
+
+.main-button a {
+  font-size: 25px;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400px;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.main-button a:hover {
+  background-color: #E4A5FF;
+  color: #ffffff;
+}

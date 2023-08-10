@@ -9,7 +9,7 @@
 	<meta name="description"
 		content="¡Bienvenido/a a Tejidos Angelicales! Ofrecemos una amplia gama de productos artesanales, incluyendo gorros, tops, ponchos, faldas, artículos para bebés, flores y más. Descubre nuestra colección única y encuentra el accesorio perfecto para ti o como regalo.">
 	<title>Tejidos Angelicales</title>
-	<link rel="icon" href="/src/img/icon.png">
+	<link rel="icon" href="/src/img/icon.ico">
 
 	<!--Scripts-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,68 +35,75 @@
 		<div class="spinner"></div>
 	</div>
 
-	<!-- Side-Navbar -->
-	<nav id="slide-menu">
-		<ul>
-			<div class="offcanvas-header border-bottom">
-				<h5 class="offcanvas-title" id="sidenav-label">MENU</h5>
-			</div>
-			<li class="nav-item nav-home px-4 nav-link" onclick="location.href = 'index.html';">Home</li>
-			<li class="nav-item nav-gorros px-4 nav-link" onclick="location.href = 'products.html';">Gorros</li>
-			<li class="nav-item nav-tops px-4 nav-link" onclick="location.href = '.html';">Tops</li>
-			<li class="nav-item nav-ponchos px-4 nav-link" onclick="location.href = '.html';">Ponchos</li>
-			<li class="nav-item nav-faldas px-4 nav-link" onclick="location.href = '.html';">Faldas</li>
-			<li class="nav-item nav-bebe px-4 nav-link" onclick="location.href = '.html';">Set de bebé</li>
-			<li class="nav-item nav-flores px-4 nav-link" onclick="location.href = '.html';">Flores</li>
-			<li class="nav-item nav-llave px-4 nav-link" onclick="location.href = '.html';">Llaveros</li>
-			<li class="nav-item nav-custom px-4 nav-link" onclick="location.href = '.html';">Tejidos Custom</li>
-			<li class="sep nav-facebook"
-				onclick="window.open('https://www.facebook.com/profile.php?id=100066991164597&mibextid=LQQJ4d','_blank');">
-				Facebook</li>
-			<li class="nav-instagram"
-				onclick="window.open('https://instagram.com/tejidos_angelicales?igshid=OGQ5ZDc2ODk2ZA==', '_blank');">
-				Instagram
-			</li>
-			<li class="nav-email" onclick="location.href ='mailto:tejidosangelicales1@gmail.com';">Email</li>
-		</ul>
-	</nav>
+	<div class="dynamicNav">
+		<!-- Side-Navbar -->
+		<nav id="slide-menu">
+			<ul>
+				<div class="offcanvas-header border-bottom">
+					<h5 class="offcanvas-title" id="sidenav-label">MENU</h5>
+				</div>
+				<li class="nav-item nav-home px-4 nav-link" onclick="location.href = 'index.html';">Home</li>
+				<li class="nav-item nav-gorros px-4 nav-link" onclick="location.href = 'products.html';">Gorros</li>
+				<li class="nav-item nav-tops px-4 nav-link" onclick="location.href = 'tops.html';">Tops</li>
+				<li class="nav-item nav-ponchos px-4 nav-link" onclick="location.href = 'ponchos.html';">Ponchos</li>
+				<li class="nav-item nav-faldas px-4 nav-link" onclick="location.href = 'faldas.html';">Faldas</li>
+				<li class="nav-item nav-bebe px-4 nav-link" onclick="location.href = 'sets.html';">Set de bebé</li>
+				<li class="nav-item nav-flores px-4 nav-link" onclick="location.href = 'flores.html';">Flores</li>
+				<li class="nav-item nav-llave px-4 nav-link" onclick="location.href = 'llaveros.html';">Llaveros</li>
+				<li class="nav-item nav-custom px-4 nav-link" onclick="location.href = 'custom.html';">Tejidos Custom
+				</li>
+				<li class="sep nav-facebook"
+					onclick="window.open('https://www.facebook.com/profile.php?id=100066991164597&mibextid=LQQJ4d','_blank');">
+					Facebook</li>
+				<li class="nav-instagram"
+					onclick="window.open('https://instagram.com/tejidos_angelicales?igshid=OGQ5ZDc2ODk2ZA==', '_blank');">
+					Instagram
+				</li>
+				<li class="nav-email" onclick="location.href ='mailto:tejidosangelicales1@gmail.com';">Email</li>
+			</ul>
+		</nav>
+	</div>
 
 	<!-- Main Content Page -->
 	<div id="content">
 
-		<!-- Popup Container -->
-		<div id="popup" class="popup-container">
-			<div class="popup-content">
-				<span class="close-button" onclick="hidePopup()">&times;</span>
-				<h2>Política de Envíos y Entregas</h2>
-				<h3 class="mt-5">Envíos:</h3>
-				<span class="popup-text">
-					Ofrecemos envíos a todas las localidades de Puerto Rico y Estados Unidos. El costo del envío está
-					sujeto a
-					cambio según el pedido, y le notificaremos por correo electrónico sobre cualquier cargo adicional.
-					Le
-					solicitamos proporcionar la dirección precisa para asegurar una entrega exitosa, dado a
-					que no gestionamos devoluciones.
-				</span>
-				<h3 class="mt-5">Entregas:</h3>
-				<span class="popup-text">
-					Realizamos entregas en el área de Caguas, Puerto Rico, aunque esta opción está sujeta a posibles
-					cambios. Le
-					proporcionaremos una fecha de entrega; si hay alguna dificultad, le pedimos que nos avise con al
-					menos una
-					hora de anticipación mediante nuestro correo electrónico o por mensaje directo de Tejidos
-					Angelicales.
-					<br><br>
-					En caso de llegar tarde a la hora acordada, le esperaremos 15 minutos; de lo contrario,
-					reprogramaremos la
-					entrega para otro día. Agradecemos su responsabilidad al recoger su pedido en el lugar y hora
-					indicados.
-				</span>
+		<div class="dynamicContent">
+			<!-- Popup Container -->
+			<div id="popup" class="popup-container dynamicContent">
+				<div class="popup-content">
+					<span class="close-button" onclick="hidePopup()">&times;</span>
+					<h2>Política de Envíos y Entregas</h2>
+					<h3 class="mt-5">Envíos:</h3>
+					<span class="popup-text">
+						Ofrecemos envíos a todas las localidades de Puerto Rico y Estados Unidos. El costo del envío
+						está
+						sujeto a
+						cambio según el pedido, y le notificaremos por correo electrónico sobre cualquier cargo
+						adicional.
+						Le
+						solicitamos proporcionar la dirección precisa para asegurar una entrega exitosa, dado a
+						que no gestionamos devoluciones.
+					</span>
+					<h3 class="mt-5">Entregas:</h3>
+					<span class="popup-text">
+						Realizamos entregas en el área de Caguas, Puerto Rico, aunque esta opción está sujeta a posibles
+						cambios. Le
+						proporcionaremos una fecha de entrega; si hay alguna dificultad, le pedimos que nos avise con al
+						menos una
+						hora de anticipación mediante nuestro correo electrónico o por mensaje directo de Tejidos
+						Angelicales.
+						<br><br>
+						En caso de llegar tarde a la hora acordada, le esperaremos 15 minutos; de lo contrario,
+						reprogramaremos la
+						entrega para otro día. Agradecemos su responsabilidad al recoger su pedido en el lugar y hora
+						indicados.
+					</span>
+				</div>
 			</div>
 		</div>
 
 		<!--Navigation Bar-->
-		<nav class="navbar navbar-expand-lg custom-navbar-bg sidenav sticky-top" data-mdb-hidden="false" id="navbar">
+		<nav class="navbar navbar-expand-lg custom-navbar-bg sidenav sticky-top dynamicContent" data-mdb-hidden="false" id="navbar">
 			<!-- Logo -->
 			<div class="mx-auto text-center logo-container">
 				<a class="mx-3 navbar-brand d-lg-none" href="index.html" atl="small-icon">
@@ -128,36 +135,35 @@
 			<div class="offcanvas" id="navbarSupportedContent">
 				<ul class="navbar-nav central-Navbar">
 					<li class="nav-item nav-home">
-						<a class="nav-link active px-4.5" href="index.html">Home</a>
+						<a class="nav-link px-4.5" href="index.html">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href="gorros.html">Gorros</a>
+						<a class="nav-link px-4.5 active" href="gorros.html">Gorros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Tops</a>
+						<a class="nav-link px-4.5" href="tops.html">Tops</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Ponchos</a>
+						<a class="nav-link px-4.5" href="ponchos.html">Ponchos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Faldas</a>
+						<a class="nav-link px-4.5" href="faldas.html">Faldas</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Set de bebé</a>
+						<a class="nav-link px-4.5" href="bebe.html">Set de bebé</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Flores</a>
+						<a class="nav-link px-4.5" href="flores.html">Flores</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Llaveros</a>
+						<a class="nav-link px-4.5" href="llaveros.html">Llaveros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-4.5" href=".html">Tejidos Custom</a>
+						<a class="nav-link px-4.5" href="custom.html">Tejidos Custom</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-
 
 		<!-- Home Page Content -->
 		<div class="home">
@@ -165,43 +171,57 @@
 			<div class="row align-items-start justify-content-between">
 
 				<div class="col-md-4 breadcrumb-col">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<ol class="breadcrumb mt-3">
+						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
 						<li class="breadcrumb-item active" aria-current="page">Tejidos</a></li>
 					</ol>
 				</div>
 
-				<div class="col-md-4 ml-auto page-selector-col">
+				<div class="col-md-4 col-sm-6 ml-auto page-selector-col">
 					<div class="sorting-section pagination pagination-sm pro-page-list justify-content-center">
-						<select id="category-selector">
-							<option value="all" selected>All Clothes</option>
-							<option value="shirts" onclick="location.href = 'index.html';">Shirts</option>
-							<option value="pants" onclick="location.href = 'index.html';">Pants</option>
-							<option value="dresses" onclick="location.href = 'index.html';">Dresses</option>
-							<option value="jackets" onclick="location.href = 'index.html';">Jackets</option>
-						</select>
+						<div class="selector-pos">
+							<div id="dropdown" class="dropdown">
+								Elije una categoría:
+								<ul class="selector">
+									<li><a class="down-pad" href="gorros.html">Gorros</a></li>
+									<li><a class="down-pad" href="tops.html">Tops</a></li>
+									<li><a class="down-pad" href="ponchos.html">Ponchos</a></li>
+									<li><a class="down-pad" href="faldas.html">Faldas</a></li>
+									<li><a class="down-pad" href="bebe.html">Set de bebé</a></li>
+									<li><a class="down-pad" href="flores.html">Flores</a></li>
+									<li><a class="down-pad" href="llaveros.html">Llaveros</a></li>
+									<li><a class="down-pad" href="custom.html">Tejidos Custom</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="col-md-4 ml-auto page-selector-col">
-					<div class="sorting-section pagination pagination-sm pro-page-list text-center justify-content-end">
-						<select id="sorting-selector">
-							<option value="default" selected>Default</option>
-							<option value="price-low-to-high">Price: Low to High</option>
-							<option value="price-high-to-low">Price: High to Low</option>
-							<option value="name-a-to-z">Name: A to Z</option>
-							<option value="name-z-to-a">Name: Z to A</option>
-						</select>
+
+				<div class="col-md-4 col-sm-6 ml-auto page-selector-col">
+					<div class="sorting-section pagination pagination-sm pro-page-list justify-content-end">
+						<div class="selector-pos">
+							<div id="dropdown" class="dropdown">
+								Elije el orden:
+								<ul data-bs-target="sorting-selector" class="selector-sorting">
+									<li class="down-pad" value="default">Default</li>
+									<li class="down-pad" value="price-low-to-high">Price: Low to High</li>
+									<li class="down-pad" value="price-high-to-low">Price: High to Low</li>
+									<li class="down-pad" value="name-a-to-z">Name: A to Z</li>
+									<li class="down-pad" value="name-z-to-a">Name: Z to A</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- ***** Tejidos Destacados Start ***** -->
+			<!-- ***** Todos los Tejidos Start ***** -->
 			<div class="product-listing">
-				<div class="row ">
+				<div class="row justify-content-center">
 					<div class="col-12">
 						<div class="heading-section">
-							<h2 class="tejidos-destacados"><strong>Tejidos destacados</strong></h2>
+							<h2 class="tejidos-destacados"><strong>Todos los Tejidos</strong></h2>
 							<img class="line-icon" alt="" src="/public/line-1.svg" />
 						</div>
 					</div>
@@ -224,7 +244,7 @@
 										<h4 class="mt-5 item-text">Set Bebé Princess
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$60</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$60.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -255,7 +275,7 @@
 										<h4 class="mt-5 item-text">Tiana Top
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$30</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$30.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -286,7 +306,7 @@
 										<h4 class="mt-5 item-text">Butterfly Dress
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$50</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$50.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -317,7 +337,7 @@
 										<h4 class="mt-5 item-text">Ramo Elegante
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$25</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$25.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -348,7 +368,7 @@
 										<h4 class="mt-5 item-text">Gorro Crochet
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$20</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$20.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -379,7 +399,7 @@
 										<h4 class="mt-5 item-text">Llavero Girasol<br><span></span>
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$5</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$5.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -410,7 +430,7 @@
 										<h4 class="mt-5 item-text">Falda Pocahontas
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$30</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$30.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -441,7 +461,7 @@
 										<h4 class="mt-5 item-text">Cartera Tropical
 										</h4>
 										<ul class="d-flex align-items-center">
-											<li class="s-cost d-inline"><i><strong>$35</strong></i></li>
+											<li class="s-cost d-inline"><i><strong>$35.00</strong></i></li>
 											<li class="s-bag d-inline" onclick="location.href = 'index.html';">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 													class="bag-svg">
@@ -459,117 +479,127 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- ***** Tejidos Destacados End ***** -->
+			<!-- ***** Todos los Tejidos End ***** -->
 
+			<div class="dynamicFooter">
 
-		<!-- Footer -->
-		<footer class="footer-04">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-						<h2 class="footer-heading"><a class="footer-heading">Aviso</a></h2>
-						<p>Para dar inicio al proceso de tejido, se requiere realizar un depósito del
-							<strong>15%</strong> del
-							precio total.
-						</p>
-						<p>Este depósito no será reembolsable. Para cualquier transacción solo se aceptará <strong>ATH
-								Móvil</strong> o <strong>Efectivo</strong>.</p>
-					</div>
+				<!-- Footer -->
+				<footer class="footer-04">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+								<h2 class="footer-heading"><a class="footer-heading">Aviso</a></h2>
+								<p>Para dar inicio al proceso de tejido, se requiere realizar un depósito del
+									<strong>15%</strong> del
+									precio total.
+								</p>
+								<p>Este depósito no será reembolsable. Para cualquier transacción solo se aceptará
+									<strong>ATH
+										Móvil</strong> o <strong>Efectivo</strong>.
+								</p>
+							</div>
 
-					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-						<h2 class="footer-heading">Categorias</h2>
-						<ul class="list-unstyled icon-hover">
-							<li><a href="#" class="py-1 d-block">Gorros</a></li>
-							<li><a href="#" class="py-1 d-block">Tops</a></li>
-							<li><a href="#" class="py-1 d-block">Ponchos</a></li>
-							<li><a href="#" class="py-1 d-block">Faldas</a></li>
-							<li><a href="#" class="py-1 d-block">Set de bebé</a></li>
-							<li><a href="#" class="py-1 d-block">Flores</a></li>
-							<li><a href="#" class="py-1 d-block">Tejidos Custom</a></li>
-						</ul>
-					</div>
+							<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+								<h2 class="footer-heading">Categorias</h2>
+								<ul class="list-unstyled icon-hover">
+									<li><a href="gorros.html" class="py-1 d-block">Gorros</a></li>
+									<li><a href="tops.html" class="py-1 d-block">Tops</a></li>
+									<li><a href="ponchos.html" class="py-1 d-block">Ponchos</a></li>
+									<li><a href="faldas.html" class="py-1 d-block">Faldas</a></li>
+									<li><a href="bebe.html" class="py-1 d-block">Set de bebé</a></li>
+									<li><a href="flores.html" class="py-1 d-block">Flores</a></li>
+									<li><a href="custom.html" class="py-1 d-block">Tejidos Custom</a></li>
+								</ul>
+							</div>
 
-					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-						<h2 class="footer-heading">Tags</h2>
-						<div class="tagcloud">
-							<a class="tag-cloud-link">Artesanía</a>
-							<a class="tag-cloud-link">Crochet</a>
-							<a class="tag-cloud-link">Decoración</a>
-							<a class="tag-cloud-link">Hecho a Mano</a>
-							<a class="tag-cloud-link">Moda</a>
-							<a class="tag-cloud-link">Ropa</a>
-							<a class="tag-cloud-link">Tejidos</a>
-							<a class="tag-cloud-link">Tejidos Personalizados</a>
+							<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+								<h2 class="footer-heading">Tags</h2>
+								<div class="tagcloud">
+									<a class="tag-cloud-link">Artesanía</a>
+									<a class="tag-cloud-link">Crochet</a>
+									<a class="tag-cloud-link">Decoración</a>
+									<a class="tag-cloud-link">Hecho a Mano</a>
+									<a class="tag-cloud-link">Moda</a>
+									<a class="tag-cloud-link">Ropa</a>
+									<a class="tag-cloud-link">Tejidos</a>
+									<a class="tag-cloud-link">Tejidos Personalizados</a>
+								</div>
+
+								<!-- <h2 class="footer-heading mt-5">Metodos de Pago</h2>
+								<ul class="ftco-footer-social p-0">
+									<li class="ftco-animate"><a href="#" data-toggle="tooltip"
+											data-placement="top"><span class="nav-facebook icon-hover"></span></a></li>
+									<li class="ftco-animate"><a href="#" data-toggle="tooltip"
+											data-placement="top"><span class="nav-instagram icon-hover"></span></a></li>
+								</ul> -->
+							</div>
+
+							<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+								<h2 class="footer-heading">Politica de envios y entregas</h2>
+								<form action="#">
+									<button class="form-control submit rounded"
+										onclick="showPopup()"><strong>Leer</strong></button>
+								</form>
+								<h2 class="footer-heading mt-5">SÍGUENOS</h2>
+								<ul class="ftco-footer-social p-0">
+									<li class="ftco-animate"><a
+											onclick="window.open('https://www.facebook.com/profile.php?id=100066991164597&mibextid=LQQJ4d','_blank');"
+											data-toggle="tooltip" data-placement="top"><span
+												class="nav-facebook icon-hover"></span></a></li>
+									<li class="ftco-animate"><a
+											onclick="window.open('https://instagram.com/tejidos_angelicales?igshid=OGQ5ZDc2ODk2ZA==', '_blank');"
+											data-toggle="tooltip" data-placement="top"><span
+												class="nav-instagram icon-hover"></span></a></li>
+									<li class="ftco-animate"><a
+											onclick="location.href ='mailto:tejidosangelicales1@gmail.com';"
+											data-toggle="tooltip" data-placement="top"><span
+												class="nav-email icon-hover"></span></a></li>
+								</ul>
+							</div>
+
 						</div>
-
-						<!-- <h2 class="footer-heading mt-5">Metodos de Pago</h2>
-            <ul class="ftco-footer-social p-0">
-              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"><span
-                    class="nav-facebook icon-hover"></span></a></li>
-              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"><span
-                    class="nav-instagram icon-hover"></span></a></li>
-            </ul> -->
 					</div>
 
-					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-						<h2 class="footer-heading">Politica de envios y entregas</h2>
-						<form action="#">
-							<button class="form-control submit rounded"
-								onclick="showPopup()"><strong>Leer</strong></button>
-						</form>
-						<h2 class="footer-heading mt-5">SÍGUENOS</h2>
-						<ul class="ftco-footer-social p-0">
-							<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"><span
-										class="nav-facebook icon-hover"></span></a></li>
-							<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"><span
-										class="nav-instagram icon-hover"></span></a></li>
-							<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"><span
-										class="nav-email icon-hover"></span></a></li>
-						</ul>
-					</div>
+					<!-- <div class="w-100 mt-5 border-top py-5">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6 col-lg-8">
 
-				</div>
+									<p class="copyright">
+										Copyright &copy;
+										<script>document.write(new Date().getFullYear());</script> All rights reserved |
+									</p>
+								</div>
+								<div class="col-md-6 col-lg-4 text-md-right">
+									<p class="mb-0 list-unstyled">
+										<a class="mr-md-3" href="#">Terms</a>
+										<a class="mr-md-3" href="#">Privacy</a>
+										<a class="mr-md-3" href="#">Compliances</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+				</footer>
+
+				<!-- #FIXME: Make it so the scrollup actually works -->
+				<!-- <a href="#" id="scrollUp" data-animation="scrollUp"><i class="fas fa-arrow-up"></i></a> -->
+
 			</div>
+		</div>
 
-			<!-- <div class="w-100 mt-5 border-top py-5">
-				<div class="container">
-					<div class="row">
-	          <div class="col-md-6 col-lg-8">
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+		<script src="/src/js/WOW.js"></script>
+		<script src="/src/js/Scrollup.js"> </script>
+		<script src="/src/js/Jarallax.js"></script>
+		<script src="/src/js/Jarallax{ext}.js"></script>
+		<script src="/src/js/Jarallax{Carousel}.js"></script>
 
-	            <p class="copyright">
-	    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | </p>
-	          </div>
-	          <div class="col-md-6 col-lg-4 text-md-right">
-	          	<p class="mb-0 list-unstyled">
-	          		<a class="mr-md-3" href="#">Terms</a>
-	          		<a class="mr-md-3" href="#">Privacy</a>
-	          		<a class="mr-md-3" href="#">Compliances</a>
-	          	</p>
-	          </div>
-	        </div>
-				</div>
-			</div> -->
-
-		</footer>
-
-		<!-- #FIXME: Make it so the scrollup actually works -->
-		<!-- <a href="#" id="scrollUp" data-animation="scrollUp"><i
-        class="fas fa-arrow-up"></i></a> -->
-
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script src="/src/js/WOW.js"></script>
-	<script src="/src/js/Scrollup.js"> </script>
-	<script src="/src/js/Jarallax.js"></script>
-	<script src="/src/js/Jarallax{ext}.js"></script>
-	<script src="/src/js/Jarallax{Carousel}.js"></script>
-
-	<script src="/src/js/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-		crossorigin="anonymous"></script>
+		<script src="/src/js/index.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"></script>
 
 </body>
 
