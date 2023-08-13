@@ -60,29 +60,29 @@ function hidePopup() {
 /*
   Dropdown
 */
-$(document).ready(function() {
-    $(document).on("click", function (e) {
-        if (!$(e.target).closest(".dropdown").length) {
-            $(".dropdown.open").removeClass("open");
-            $(".dropdown ul").slideUp("fast");
-        }
-    });
+$(document).ready(function () {
+	$(document).on("click", function (e) {
+		if (!$(e.target).closest(".dropdown").length) {
+			$(".dropdown.open").removeClass("open");
+			$(".dropdown ul").slideUp("fast");
+		}
+	});
 
-    $(".dropdown").on("click", function (e) {
-        e.preventDefault();
-        if ($(this).hasClass("open")) {
-            $(this).removeClass("open");
-            $(this).children("ul").slideUp("fast");
-        } else {
-            $(this).addClass("open");
-            $(this).children("ul").slideDown("fast");
-        }
-    });
+	$(".dropdown").on("click", function (e) {
+		e.preventDefault();
+		if ($(this).hasClass("open")) {
+			$(this).removeClass("open");
+			$(this).children("ul").slideUp("fast");
+		} else {
+			$(this).addClass("open");
+			$(this).children("ul").slideDown("fast");
+		}
+	});
 
-    $(".dropdown a").on("click", function (e) {
-        e.stopPropagation(); 
-        window.location.href = $(this).attr("href"); 
-    });
+	$(".dropdown a").on("click", function (e) {
+		e.stopPropagation();
+		window.location.href = $(this).attr("href");
+	});
 });
 
 
@@ -147,6 +147,25 @@ sortingSelector.addEventListener('click', (e) => {
 		});
 	}
 });
+
+
+/*
+  Switch Alternator
+*/
+const defaultSwitch = document.getElementById('flexSwitchCheckDefault');
+const checkedSwitch = document.getElementById('flexSwitchCheckChecked');
+
+defaultSwitch.checked = false;
+checkedSwitch.checked = false;
+
+function toggleSwitch(otherSwitchId) {
+	const otherSwitch = document.getElementById(otherSwitchId);
+
+	if (otherSwitch.checked) {
+		otherSwitch.checked = false;
+	}
+	updateOrderSummary();
+}
 
 
 /*

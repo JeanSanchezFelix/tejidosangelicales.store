@@ -1365,6 +1365,17 @@ footer {
   color: #E4A5FF;
 }
 
+.animate{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;  
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+}
 
 
 
@@ -1621,4 +1632,66 @@ ul {
 .main-button a:hover {
   background-color: #E4A5FF;
   color: #ffffff;
+}
+
+
+
+/*
+---------------------------------------------
+  cart.html 
+---------------------------------------------
+*/
+
+div.cart-bg{
+  background: #E4A5FF;
+  background: -webkit-linear-gradient(to top, #E4A5FF,#45CFDD);
+  background: linear-gradient(to top, #E4A5FF,#45CFDD);
+  min-height: 100vh;
+}
+
+.hover-trash {
+  -moz-transition: color 300ms;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.hover-trash:hover {
+  color: #E4A5FF;
+}
+
+.hover-plus {
+  -moz-transition: color 300ms;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.hover-plus:hover {
+  color: #E4A5FF;
+}
+
+.table-base {
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.form-check-input:checked {
+  background-color: #45CFDD;
+}
+
+.breadcrumb-cart .breadcrumb li a {
+  color: #666;
+  font-size: 18px;
+}
+
+.breadcrumb-cart .breadcrumb li a:hover {
+  color: #202020;
+  -moz-transition: color 300ms;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.breadcrumb-cart .breadcrumb .active {
+  color: #000000;
+  font-size: 18px;
 }

@@ -1,0 +1,55 @@
+<!-- HTML template for displaying product details -->
+<div id="productDetails" style="display: none;">
+    <h5 id="productName"></h5>
+    <p id="productSpecifications"></p>
+    <p id="productPrice"></p>
+    <!-- Other product details here -->
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const productData = [
+        {
+          name: 'Product 1',
+          price: 50.00,
+          sizeOptions: ['Small', 'Medium', 'Large'],
+          colorOptions: ['Red', 'Blue', 'Green']
+          // Add other product specifications
+        },
+        {
+          name: 'Product 2',
+          price: 60.00,
+          sizeOptions: ['Small', 'Medium', 'Large'],
+          colorOptions: ['Black', 'White', 'Gray']
+          // Add other product specifications
+        },
+        // Add more products...
+      ];
+  
+      const productDetailsContainer = document.getElementById('productDetails');
+      const productNameElement = document.getElementById('productName');
+      const productSpecificationsElement = document.getElementById('productSpecifications');
+      const productPriceElement = document.getElementById('productPrice');
+  
+      function displayProductDetails(product) {
+        productNameElement.textContent = product.name;
+        productSpecificationsElement.textContent = `Size: ${product.sizeOptions.join(', ')} | Color: ${product.colorOptions.join(', ')}`;
+        productPriceElement.textContent = `Price: $${product.price.toFixed(2)}`;
+        // Update other product details in the template
+        
+        productDetailsContainer.style.display = 'block';
+      }
+  
+      // Listen for user interactions, such as selecting a product
+      // Here, I'm using a simple example where you have product links
+      const productLinks = document.querySelectorAll('.product-link');
+      productLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          const productId = parseInt(link.dataset.productId);
+          const selectedProduct = productData[productId];
+          displayProductDetails(selectedProduct);
+        });
+      });
+    });
+  </script>
+  
