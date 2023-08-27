@@ -63,8 +63,8 @@ function updateOrderSummary() {
             orderSubtotalElement.innerText = `$${subtotal.toFixed(2)}`;
 
             // Update other costs and total based on the calculated subtotal
-            const shippingCost = checkedSwitch.checked ? 10.00 : 0.00; // Update shipping cost based on switch
-            const taxRate = 0.10; // Example tax rate (10%)
+            const shippingCost = checkedSwitch.checked ? 10.00 : 0.00;
+            const taxRate = 0.115;
             const taxCost = subtotal * taxRate;
             const totalCost = subtotal + shippingCost + taxCost;
 
