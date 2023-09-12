@@ -21,7 +21,6 @@ Currently, the website is being converted from static to dynamic code, to later 
 ## Tech/Framework used
 
 - Bootstrap: A popular CSS framework for building responsive and visually appealing websites.
-- JavaScript React: A JavaScript library for building user interfaces, providing a component-based approach.
 
 ## Screenshots
 
